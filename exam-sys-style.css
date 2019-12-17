@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.main-container {
+    background-color: whitesmoke;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.header {
+    height: auto;
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    padding: 3px 8px;
+    border: 2px solid black;
+    width: fit-content;
+}
+
+.timer {
+    width: fit-content;
+    padding: 3px 8px;
+    margin-right: 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+}
+
+.footer p {
+    width: fit-content;
+    height: auto;
+    align-self: center;
+}
+
+#submit {
+    background-color: cadetblue;
+    border: none;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    width: fit-content;
+    padding: 0px 20px;
+}
+
+.aside-container {
+    background-color: lightgray;
+    width: 30%;
+    z-index: 3;
+    height: 90%;
+}
+
+.head,
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    height: auto;
+}
+
+.head p,
+.row p {
+    width: fit-content;
+}
+
+.head:first-child p {
+    text-transform: uppercase;
+    color: cadetblue;
+}
+
+.row:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.active {
+    border-bottom: 2px solid orangered;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider-image:first-child {
+    opacity: 1;
+    visibility: visible;
+}
+
+.question {
+    display: flex;
+    height: 25%;
+    align-self: stretch;
+    align-content: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.answer-container {
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.answer {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    width: 6%;
+    margin-right: 15px;
+}
+
+.slider-button {
+    position: absolute;
+    top: 40%;
+    background-color: transparent;
+    width: fit-content;
+    height: 10%;
+    padding: 50px 20px;
+}
+
+.slider-button i {
+    color: black;
+    font-size: 45px;
+    width: fit-content;
+}
+
+#btnRight {
+    right: 0%;
+}
+
+#btnRight i {
+    float: right;
+}
+
+#btnRight i::after {
+    content: "";
+    clear: both;
+}
+
+@keyframes slider-collapse-forward-animation {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+    }
+    80% {
+        opacity: 1;
+        left: -800px;
+    }
+    100% {
+        opacity: 0;
+        left: -1000px;
+        visibility: hidden;
+    }
+}
+
+@keyframes slider-expand-forward-animation {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        right: 0%;
+    }
+    100% {
+        opacity: 1;
+        right: 0%;
+        visibility: visible;
+    }
+}
+
+@keyframes slider-collapse-backward-animation {
+    0% {
+        opacity: 1;
+        right: 0;
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+        right: -800px;
+    }
+    100% {
+        opacity: 0;
+        right: -1000px;
+        visibility: hidden;
+    }
+}
+
+@keyframes slider-expand-backward-animation {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        right: 0%;
+    }
+    100% {
+        opacity: 1;
+        right: 0%;
+        visibility: visible;
+    }
+}

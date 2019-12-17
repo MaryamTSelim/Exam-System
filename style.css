@@ -1,0 +1,77 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./bg.jpeg");
+    background-size: cover;
+    background-clip: border-box;
+    background-position: center;
+}
+
+.sign-in-container {
+    background-color: whitesmoke;
+    width: 40%;
+    height: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3rem
+}
+
+label {
+    font-size: 20px;
+    color: cadetblue
+}
+
+input[type="text"],
+input[type="number"] {
+    background-color: whitesmoke;
+    padding: 3px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 0.5px solid cadetblue;
+    align-self: center;
+    width: 80%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    font-style: oblique;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 18px;
+    align-self: center;
+    border: none;
+    background-color: cadetblue;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+}
+
+.error {
+    border-bottom: 0.5px solid darkred;
+}
